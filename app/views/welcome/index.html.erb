@@ -1,2 +1,48 @@
-<h1>Welcome to the photo app</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<% if current_user %>
+  <h3>Welcome <%= current_user.email %></h3>
+<% else %>
+  <div class="container container-fluid text-center">
+    <div class="jumbotron welcome text-center">
+      <h2> Welcome to the photo app! </h2>
+    </div>
+    <hr>
+      <h2>Pricing</h2>
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3>Free Plan (Sort of!) $20</h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <li>Crappy Design</li>
+              <li>Non reliable Servers</li>
+              <li>Limited uploads</li>
+            </ul>
+          </div>
+          <div class="panel-footer">
+            <div class="btn btn-md btn-success"><strong>Sign Up!</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3>Premium Plan $50</h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <li>Same Crappy Design</li>
+              <li>Some what reliable Servers</li>
+              <li>Unlimited uploads (Kind of)</li>
+            </ul>
+          </div>
+          <div class="panel-footer">
+            <div class="btn btn-md btn-success"><strong>Sign Up!</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>  
