@@ -118,10 +118,17 @@ color: #fff;
   box-shadow: 12px 11px 6px 1px rgba(0,0,0,0.19);
 }
 
-.panel .btn:hover {
+.panel:hover .btn {
   
   background-color: #fff;
   color: #62c462;
+  
+}
+
+.panel:hover .panel-heading {
+  
+  background-color: #62c462;
+  color: #fff;
   
 }
 
