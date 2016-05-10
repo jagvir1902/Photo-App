@@ -1,4 +1,4 @@
-/* $(document).ready(function(){
+ $(document).ready(function(){
     
     var show_errors, stripeResponseHandler, submitHandler;
     
@@ -52,8 +52,9 @@ return false;
 
 });
 
-*/
 
+
+/*
 $(function() {
   var stripeResponseHandler, $cardForm;
 
@@ -66,13 +67,16 @@ $(function() {
       var token = response.id;
 
       $cardForm.append($('<input type="hidden" name="stripe_token" />').val(token));
+      alert(token);
       $cardForm.get(0).submit();
     }
   };
 
   $cardForm.submit(function() {
     Stripe.card.createToken(this, stripeResponseHandler);
-
+    
     return false;
   });
 });
+
+*/
